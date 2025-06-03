@@ -21,8 +21,8 @@ import { useEffect, useState } from "react";
 export default function chat() {
   const { data: session, status } = useSession();
   const router = useRouter();
-  const [htmlCssCode, setHtmlCssCode] = useState
-  (`<!DOCTYPE html>
+  
+  const [htmlCssCode, setHtmlCssCode] = useState(`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -87,6 +87,8 @@ export default function chat() {
 </body>
 </html>`);
 
+  
+
   useEffect(() => {
     if (status === "loading") return;
     if (!session) {
@@ -105,6 +107,7 @@ export default function chat() {
     }
   };
 
+  
   return (
     <SidebarProvider>
       <Sidebar>
@@ -118,7 +121,6 @@ export default function chat() {
             New Chat
           </Button>
         </SidebarContent>
-
         <SidebarFooter>
           <Card className="flex flex-row items-start gap-3 p-3">
             <Avatar className="rounded-lg w-10 h-10">
@@ -145,10 +147,13 @@ export default function chat() {
       <main className="flex-1 ">
         <div className="p-4 flex flex-row">
           <div className="flex-1 mr-1 p-2 h-screen">
-            <ChatWindow />
+            <ChatWindow setHtmlCssCode={setHtmlCssCode}/>
           </div>
           <div className="flex-1 mr-1 p-2 h-screen">
-            <CodeWindow htmlCssCode = {htmlCssCode} setHtmlCssCode = {setHtmlCssCode} />
+            <CodeWindow
+              htmlCssCode={htmlCssCode}
+              setHtmlCssCode={setHtmlCssCode}
+            />
           </div>
         </div>
       </main>
