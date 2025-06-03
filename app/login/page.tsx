@@ -88,7 +88,7 @@ export default function Login() {
 
   return (
     <Card className="flex flex-col items-center justify-center m-4 p-8 w-96 mx-auto mt-20">
-      <CardHeader>
+      <CardHeader className="items-center text-center w-full">
         <CardTitle className="text-2xl">
           {isLogin ? "Login" : "Register"}
         </CardTitle>
