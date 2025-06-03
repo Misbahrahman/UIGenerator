@@ -14,10 +14,35 @@ import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { PenIcon } from "lucide-react";
 import ChatWindow from "./chatWindow";
 import CodeWindow from "./codeWIndow";
+import { signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 
 
 export default function chat() {
+    const { data: session, status } = useSession()
+    const router = useRouter()
+
+    useEffect(() => {
+        if (status === "loading") return
+        if (!session) {
+            router.push('/login')
+        }
+    }, [session, status, router])
+
+     const handleLogout = async () => {
+        try {
+            await signOut({
+                callbackUrl: '/login',
+                redirect: true
+            })
+        } catch (error) {
+            console.error("Logout error:", error)
+        }
+    }
+
+
   return (
     <SidebarProvider>
       <Sidebar>
@@ -43,10 +68,15 @@ export default function chat() {
             </Avatar>
 
             <div className="flex flex-col">
-              <p className="text-sm font-medium">UserName</p>
-              <p className="text-xs text-muted-foreground">@evilrabbit</p>
+              <p className="text-sm font-medium">{session ? session?.user?.name : "username"}</p>
+              <p className="text-xs text-muted-foreground">{session ? session?.user?.email : "username"}</p>
             </div>
+
+            
           </Card>
+          <Button onClick={handleLogout}>
+                Logout
+            </Button>
         </SidebarFooter>
       </Sidebar>
 
