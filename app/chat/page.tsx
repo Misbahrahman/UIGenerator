@@ -46,7 +46,7 @@ export default function chat() {
 
   
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <Sidebar>
         <SidebarHeader>
           <h2 className="Logo">UI Generator</h2>
@@ -81,12 +81,12 @@ export default function chat() {
         </SidebarFooter>
       </Sidebar>
 
-      <main className="flex-1 ">
-        <div className="p-4 flex flex-row">
-          <div className="flex-1 mr-1 p-2 h-screen">
+      <main className="flex-1">
+        <div className="p-2 sm:p-4 flex flex-col lg:flex-row h-screen">
+          <div className="flex-1 mb-2 lg:mb-0 lg:mr-1 p-1 sm:p-2 h-1/2 lg:h-screen">
             <ChatWindow htmlCssCode={htmlCssCode} setHtmlCssCode={setHtmlCssCode}/>
           </div>
-          <div className="flex-1 mr-1 p-2 h-screen">
+          <div className="flex-1 lg:mr-1 p-1 sm:p-2 h-1/2 lg:h-screen">
             <CodeWindow
               htmlCssCode={htmlCssCode}
               setHtmlCssCode={setHtmlCssCode}

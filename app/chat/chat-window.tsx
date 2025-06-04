@@ -69,7 +69,6 @@ export default function ChatWindow({ htmlCssCode ,  setHtmlCssCode }: any) {
 
       setMessages(convertedMessages);
       
-      //will automaticlly update the html on reload/login
       if(htmlCssCode === ""){
         const lastAIMessageContent = convertedMessages[convertedMessages.length - 1].content;
         extractAndSetCode(lastAIMessageContent);
@@ -127,8 +126,8 @@ export default function ChatWindow({ htmlCssCode ,  setHtmlCssCode }: any) {
   }, [session]);
 
   return (
-    <Card className="h-full mb-4 flex flex-col">
-      <SidebarTrigger className="sidebar-icon" />
+    <Card className="h-full mb-4 flex flex-col relative">
+      <SidebarTrigger className="absolute top-2 z-10 w-8 h-8 " />
       <div className="flex-1 overflow-y-auto p-4">
         {messages.length === 0 && !isLoading ? (
           <div className="text-center text-gray-500 mt-8">
