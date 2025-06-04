@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UI Generator
 
-## Getting Started
+🚀 **[Live Demo](https://ui-generator-pink.vercel.app/)**
 
-First, run the development server:
+A powerful AI-powered tool that transforms your ideas into beautiful HTML/CSS code. Simply describe what you want to build, and watch as the AI generates clean, production-ready code with live preview.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🤖 AI-Powered Generation**: Describe your UI in natural language and get instant HTML/CSS code
+- **👀 Live Preview**: See your designs come to life in real-time
+- **⚡ Lightning Fast**: Generate code instantly with AI assistance
+- **🎨 Clean Code Output**: Production-ready HTML & CSS
+- **💾 Chat History**: Save and revisit your previous conversations
+- **📱 Responsive Design**: Works seamlessly on desktop, tablet, and mobile
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Quick Start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Start Creating**: Click on "Start Chat"
+2. **Sign Up/Login**: Create an account or sign in
+3. **Describe Your UI**: Type what you want to build
+4. **Get Code**: The AI generates HTML/CSS code instantly
+5. **Live Preview**: Switch tabs to see your design come to life
 
-## Learn More
+## 📝 Example Prompts
 
-To learn more about Next.js, take a look at the following resources:
+- "Create a modern landing page with a hero section"
+- "Build a responsive navigation bar with dropdown menus"
+- "Design a contact form with floating labels"
+- "Make a pricing table with three columns"
+- "Create a dark-themed dashboard sidebar"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: TailwindCSS 4, Shadcn/ui
+- **AI**: Google Gemini
+- **Database**: PostgreSQL with Prisma
+- **Auth**: NextAuth.js v5
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ### Note -> Free tier Api in use , could get exhausted easily
