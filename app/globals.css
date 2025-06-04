@@ -140,3 +140,26 @@
   background: #dc2626;
 }
 
+.Logo-big {
+  font-size: 8rem;       
+  font-weight: 900;
+  color: #000000;
+  margin: 0 auto;         
+  position: relative;
+  text-align: center;     
+  display: block;       
+  width: fit-content;
+
+}
+
+.Logo-big::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;          
+  left: 50%;             
+  transform: translateX(-50%); 
+  width: 50%;
+  height: 10px;         
+  background: #dc2626;
+}
+
