@@ -1,10 +1,10 @@
-import NextAuth from "next-auth"
+import NextAuth, { NextAuthConfig } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
-const authOptions = {
+const authOptions : NextAuthConfig = {
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -18,7 +18,7 @@ const authOptions = {
         }
 
         const user = await prisma.user.findUnique({
-          where: { email: credentials.email },
+          where: { email: `${credentials.email}` },
         })
 
         if (user && user.password === credentials.password) {
@@ -38,13 +38,13 @@ const authOptions = {
     strategy: "jwt",
   },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token , user } : any) {
       if (user) {
         token.type = user.type
       }
       return token
     },
-    async session({ session, token }) {
+    async session({ session, token } : any) {
       if (session.user) {
         session.user.id = token.sub!
         session.user.type = token.type as string
