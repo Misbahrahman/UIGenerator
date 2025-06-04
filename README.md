@@ -38,3 +38,7 @@ A powerful AI-powered tool that transforms your ideas into beautiful HTML/CSS co
 - **Auth**: NextAuth.js v5
 
 - ### Note -> Free tier Api in use , could get exhausted easily
+
+- ## Screenshots
+- ![image](https://github.com/user-attachments/assets/dc9db38b-3a9a-4310-b87a-562792f27e41)
+
