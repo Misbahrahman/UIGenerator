@@ -22,70 +22,7 @@ export default function chat() {
   const { data: session, status } = useSession();
   const router = useRouter();
   
-  const [htmlCssCode, setHtmlCssCode] = useState(`<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .cta-btn {
-            background: #fff;
-            color: #667eea;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .cta-btn:hover {
-            background: #f0f0f0;
-            transform: translateY(-2px);
-        }
-    </style>
-</head>
-<body>
-    <section class="hero">
-        <h1>Welcome to the Future</h1>
-        <p>Create amazing landing pages with our AI-powered editor</p>
-        <button class="cta-btn">Get Started</button>
-    </section>
-</body>
-</html>`);
+  const [htmlCssCode, setHtmlCssCode] = useState("");
 
   
 
@@ -147,7 +84,7 @@ export default function chat() {
       <main className="flex-1 ">
         <div className="p-4 flex flex-row">
           <div className="flex-1 mr-1 p-2 h-screen">
-            <ChatWindow setHtmlCssCode={setHtmlCssCode}/>
+            <ChatWindow htmlCssCode={htmlCssCode} setHtmlCssCode={setHtmlCssCode}/>
           </div>
           <div className="flex-1 mr-1 p-2 h-screen">
             <CodeWindow
