@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/sidebar";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { PenIcon } from "lucide-react";
-import ChatWindow from "./chatWindow";
-import CodeWindow from "./codeWIndow";
+import ChatWindow from "./chat-window";
+import CodeWindow from "./code-wIndow";
 import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";

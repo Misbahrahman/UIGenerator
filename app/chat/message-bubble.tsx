@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Message } from "./chatWindow";
+import { Message } from "./chat-window";
 
 export default function MessageBubble({ message }: { message: Message }) {
     const { senderType, content, timestamp } = message;

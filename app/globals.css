@@ -131,7 +131,7 @@
 }
 
 .Logo::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -141,25 +141,38 @@
 }
 
 .Logo-big {
-  font-size: 8rem;       
+  font-size: 8rem;
   font-weight: 900;
   color: #000000;
-  margin: 0 auto;         
+  margin: 0 auto;
   position: relative;
-  text-align: center;     
-  display: block;       
+  text-align: center;
+  display: block;
   width: fit-content;
-
 }
 
 .Logo-big::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -4px;          
-  left: 50%;             
-  transform: translateX(-50%); 
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50%;
-  height: 10px;         
+  height: 10px;
   background: #dc2626;
 }
 
+@media (max-width: 640px) {
+  .Logo-big {
+    line-height: 1.2;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+}
+
+/* Ensure proper spacing on very small screens */
+@media (max-width: 375px) {
+  .Logo-big {
+    line-height: 1.3;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 import { Card, CardFooter } from "@/components/ui/card";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import MessageBubble from "./messageBubble";
+import MessageBubble from "./message-bubble";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
